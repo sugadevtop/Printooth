@@ -70,6 +70,11 @@ data class Printable private constructor(val text: String,
             return this
         }
 
+        fun setBitmap(bitmap: Bitmap): PrintableBuilder {
+            this.image = bitmap
+            return this
+        }
+
         fun build(): Printable {
             return Printable(text, fontSize, alignment, newLinesAfter, bold, underlined, characterCode, lineSpacing, image)
         }
